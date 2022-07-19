@@ -6,7 +6,7 @@
 #    By: audreyer <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/21 22:50:22 by audreyer          #+#    #+#              #
-#    Updated: 2022/07/18 21:09:50 by audreyer         ###   ########.fr        #
+#    Updated: 2022/07/19 06:00:21 by audreyer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = fdf
 
 CC = gcc
 
-FLAG = -Wall -Werror -Wextra -g3
+FLAG = -Wall -Werror -Wextra 
 
 SRC=	src/fdf.c	\
 	src/ft_printdroite2.c	\

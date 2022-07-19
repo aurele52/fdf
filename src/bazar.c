@@ -6,7 +6,7 @@
 /*   By: audreyer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:06:02 by audreyer          #+#    #+#             */
-/*   Updated: 2022/07/18 22:51:48 by audreyer         ###   ########.fr       */
+/*   Updated: 2022/07/19 05:59:58 by audreyer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_lens(t_fdf *fdf, char *str)
 	fdf->xnbr = 0;
 	fdf->ynbr = 0;
 	i = 0;
+	if (str == 0)
+		ft_exit(fdf->garbage, "ERROR");
 	while (str[i])
 	{
 		if (str[i] == '\n')
@@ -68,6 +70,8 @@ int	**ft_open(char *str, t_fdf *fdf)
 	int		fd;
 
 	ret = ft_strdup("", fdf->garbage);
+	if (ret == 0)
+		ft_exit(fdf->garbage, "ERROR");
 	fd = open(str, O_RDONLY);
 	if (fd == -1)
 		ft_exit(fdf->garbage, "Error");
@@ -81,6 +85,8 @@ int	**ft_open(char *str, t_fdf *fdf)
 			return (ft_splitint(ret, fdf->garbage));
 		}
 		ret = ft_strjoin(ret, temp, fdf->garbage);
+		if (ret == 0)
+			ft_exit(fdf->garbage, "ERROR");
 	}
 	return (0);
 }
