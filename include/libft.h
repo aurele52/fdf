@@ -6,7 +6,7 @@
 /*   By: audreyer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 20:04:18 by audreyer          #+#    #+#             */
-/*   Updated: 2022/07/19 04:44:06 by audreyer         ###   ########.fr       */
+/*   Updated: 2022/08/08 15:54:09 by audreyer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -32,15 +32,15 @@ typedef struct s_list
 {
 	struct s_list	*next;
 	struct s_list	*back;
-	void			*content;
+	int				*content;
 	struct s_pos	*pos;
 }	t_list;
 
+int		ft_strcmp(char *s1, char *s2);
 int		**ft_splitint(char *c, t_pos *free);
 void	ft_exit(t_pos *garbage, char *str);
 int		ft_abs(int a);
 char	*get_next_line(int fd, t_pos *free);
-int		ft_voidtoint(int *i);
 void	*ft_mallocint(int i, t_pos *free);
 void	*ft_malloc(int size, t_pos *free);
 t_list	*ft_lstmin(t_pos *pos);
